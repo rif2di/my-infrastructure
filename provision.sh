@@ -10,6 +10,11 @@ sudo apt upgrade -y
 echo "--- Installing nginx ---"
 sudo apt install -y nginx
 
+echo "--- Copying nginx config ---"
+sudo cp ~/my-infrastructure/nginx.conf /etc/nginx/sites-available/roosterworks.org
+sudo ln -s /etc/nginx/sites-available/roosterworks.org /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+
 echo "--- Writing index.html ---"
 sudo bash -c 'cat > /var/www/html/index.html << EOF
 <!DOCTYPE html>
