@@ -21,7 +21,7 @@ sudo bash -c 'cat > /var/www/html/index.html << EOF
 <html>
   <head><title>Provisioned Server</title></head>
   <body>
-    <h1>Version 2 - deployed via GitHub!</h1>
+    <h1>Roosterworks - Red Version</h1>
     <p>This page was created by a shell script.</p>
   </body>
 </html>
